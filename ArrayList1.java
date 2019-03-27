@@ -6,7 +6,7 @@ package day1example;
 	int buffer;
 	ArrayList1(){
 		size=0;
-		buffer=3;
+		buffer=5;
 		arr=new Object[buffer];	
 	}
 	public void checkindex()

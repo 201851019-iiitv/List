@@ -19,10 +19,10 @@ public  void push(int index,int data) {
 	Node prev_node=new Node();
 	Node temp=new Node();
 	temp=firstnode;
-	for(int i=0;i<index-2;i++) {
+	for(int i=0;i<=index-2;i++) {
 		temp=temp.next;	
 	}
-	prev_node=temp;
+	prev_node=temp;	
 	if (prev_node == null) 
     { 
         System.out.println("The given previous node cannot be null"); 

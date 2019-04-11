@@ -5,5 +5,4 @@ interface  List1 {
  public void remove(int index);
  public void search(int value);
  public void traverse();
- public boolean exit();
 }

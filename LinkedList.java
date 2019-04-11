@@ -1,4 +1,4 @@
-package day1example;
+
 
 public class LinkedList {
 	Node firstnode;

@@ -1,5 +1,4 @@
-package day1example;
- class ArrayList1 implements List1{
+class ArrayList1 implements List1{
 	Object arr[];
 	int index;
 	int size;
@@ -34,32 +33,40 @@ public void Add(int value ,int index) {
 	if(size==buffer)
 	{   checkindex();
 	}
-if(index>=0||index<=size) {
-	for(int j=size;j>=index;j--) {
+	try{
+             if(index<0||index>size) {
+	       BoundException ob = new BoundException();
+		  throw ob;
+}
+for(int j=size;j>=index;j--) {
 		arr[j+1]=arr[j];
 	}
 	arr[index]=value;
 	size++;
 	
 }
-else {
-	 BoundException obj =new BoundException();
-	  obj.PrintError();	
+		
 }
+	catch(BoundException o) {
+			o.PrintError();
+			return;
 
 }
 public void  remove(int index) {
-	if(index>=0||index<=size) {
-		for(int j=size-1;j>=index;j--) {
+		try{
+             if(index<0||index>size) {
+	       BoundException ob = new BoundException();
+		  throw ob;
+}
+	for(int j=size-1;j>=index;j--) {
 			arr[j]=arr[j+1];
 		}
 		size--;
 		
 	}
-	else {
-		 BoundException obj =new BoundException();
-		  obj.PrintError();	
-	}
+	catch(BoundException o) {
+			o.PrintError();
+			return;
 	}
 	
 public void traverse() {
@@ -69,9 +76,14 @@ public void traverse() {
 }
 
 public void search(int value) {
-	System.out.println("hi");	
+	for(int p=0;p<size;p++){
+		if(arr[p]==value){
+			return p;
+			break;
+		}
+		else
+			System.out.println("element not found");
 }
-public boolean exit() {
-	return false;
 }
+		
 }

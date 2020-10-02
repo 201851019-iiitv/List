@@ -1,3 +1,5 @@
+
+//------------Define class-----------------------------------------------------------\\
 class ArrayList1 implements List1{
 	Object arr[];
 	int index;
@@ -8,6 +10,11 @@ class ArrayList1 implements List1{
 		buffer=5;
 		arr=new Object[buffer];	
 	}
+	
+	
+//---------------------------Check Index is valid or not--------------------------\\	
+	
+	
 	public void checkindex()
 	{
 	Object arr2[]=new Object[buffer*2];
@@ -17,6 +24,9 @@ class ArrayList1 implements List1{
 	arr=arr2;
 	buffer=buffer*2;
 			}
+//-------------------------------------------Add value at last----------------------\\	
+	
+	
 public void Add(int value) {
 		if(size==buffer)
 		{   checkindex();
@@ -29,6 +39,8 @@ public void Add(int value) {
 		}
 		
 	}
+	
+//----------------------Add value at a specific index--------------------------------------\\	
 public void Add(int value ,int index) {
 	if(size==buffer)
 	{   checkindex();
@@ -46,12 +58,15 @@ for(int j=size;j>=index;j--) {
 	
 }
 		
-}
+}  //--------------------exception handling-----------------------\\
 	catch(BoundException o) {
 			o.PrintError();
 			return;
 
 }
+	
+	
+//-------------------------------remove last index------------------------------\\	
 public void  remove(int index) {
 		try{
              if(index<0||index>size) {
@@ -69,11 +84,16 @@ public void  remove(int index) {
 			return;
 	}
 	
+//--------------------------------------print all element  in list-----------------------\\	
+	
 public void traverse() {
 	for(int b=0;b<size;b++) {
 	System.out.println(arr[b]);	
 	}
 }
+	
+	
+//-----------------------------------search a element in list--------------------------\\	
 
 public void search(int value) {
 	for(int p=0;p<size;p++){

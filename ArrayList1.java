@@ -8,7 +8,7 @@ class ArrayList1 implements List1{
 	ArrayList1(){
 		size=0;
 		buffer=5;
-		arr=new Object[buffer];	
+		arr=new Object[buffer];	//Ambesh
 	}
 	
 	
